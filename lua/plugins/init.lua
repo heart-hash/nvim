@@ -125,6 +125,7 @@ return {
         "shfmt",
         "pyright",
         "rust-analyzer",
+        "yaml-language-server",
       },
     },
   },
