@@ -1,78 +1,8 @@
 return {
 
-  {
-    "mbbill/undotree",
-    lazy = false, -- needs to be explicitly set, because of the keys property
-    cmd = {
-      "UndotreeToggle",
-    },
-  },
   -- Override plugin definition options
 
-  -- lazy.nvim
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
 
-    opts = {
-      lsp = {
-        override = {
-          -- Fix WARNING `vim.lsp.util.convert_input_to_markdown_lines` and `vim.lsp.util.stylize_markdown`
-          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-          ["vim.lsp.util.stylize_markdown"] = true,
-          ["cmp.entry.get_documentation"] = true,  -- Ensure you have hrsh7th/nvim-cmp installed
-        },
-        -- Fix ERROR conflicts by disabling hover and signature in Noice if they are managed by another plugin
-        hover = {
-          enabled = false, -- Disables Noice handling for hover if another plugin manages it
-        },
-        signature = {
-          enabled = false, -- Disables Noice handling for signature help if another plugin manages it
-        },
-      },
-      presets = {
-      },
-      views = {
-        cmdline_popup = {
-          position = {
-            row = 20,
-            col = "50%",
-          },
-          size = {
-            width = 60,
-            height = "auto",
-          },
-        },
-        popupmenu = {
-          relative = "editor",
-          position = {
-            row = 23,
-            col = "50%",
-          },
-          size = {
-            width = 60,
-            height = 10,
-          },
-          border = {
-            style = "rounded",
-            padding = { 0, 1 },
-          },
-          win_options = {
-            winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
-          },
-        },
-      },
-    },
-
-    dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
-      }
-  },
 
   {
     "stevearc/conform.nvim",

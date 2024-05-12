@@ -14,8 +14,6 @@ map("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "window down" })
 map("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "window up" })
 map("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "window right" })
 
--- undotree
-map("n", "<leader>n", "<cmd>UndotreeToggle<CR>", { desc = "Toggle undotree"})
 
 -- Keep the search term in the middle of the screen with n and N
 map("n", "n", "nzzzv", { desc = "Next search result centered" })
